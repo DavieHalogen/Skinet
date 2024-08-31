@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="css/Profile.css">
+</head>
+<body>
+    <header>
+        <div class="dropdown">
+          <button class="dropbtn">Menu</button>
+            <div class="dropdown-content">
+                <a href="/">Home</a>
+                <a href="/payment">Payment</a>
+                <a href="/logout">Logout</a>
+            </div>
+        </div>
+        <h1>Your Profile</h1>
+    </header>
+    <main>
+<section id="profile-photo">
+        <a  class="back" href="/payment">Back</a>
+               <h2>Profile Photo</h2>
+          <div class="photo-container">
+               <img id="profile-image" src="/images/default-profile.png" alt="Profile Photo">
+          </div>
+          
+    <form id="photo-form" enctype="multipart/form-data">
+        <input type="file" id="profile-photo-input" name="profile-photo" accept="image/*" required>
+        <button type="submit">Upload Photo</button>
+    </form>
+</section>
+<section id="profile-info">
+            <h2>Profile Information</h2>
+            <form id="profile-form">
+          <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+                    <label for="mobile-number">Mobile Number:</label>
+                    <input type="text" id="mobile-number" name="mobile-number" pattern="[0-9]{10}" required>
+          </div>
+          <div class="form-group">
+                    <label for="package">Current Package:</label>
+                    <select id="package" name="package" required>
+                        <option value="Hourly Package">Hourly Package</option>
+                        <option value="Daily Package">Daily Package</option>
+                        <option value="Two-Day Package">Two-Day Package</option>
+                        <option value="Weekly Package">Weekly Package</option>
+                        <option value="Monthly Package">Monthly Package</option>
+                        <option value="Family Package">Family Package</option>
+                    </select>
+          </div>
+                <button type="submit">Update Profile</button>
+            </form>
+        </section>
+
+        <section id="change-password">
+            <h2>Change Password</h2>
+            <form id="password-form">
+                <div class="form-group">
+                    <label for="current-password">Current Password:</label>
+                    <input type="password" id="current-password" name="current-password" required>
+                </div>
+                <div class="form-group">
+                    <label for="new-password">New Password:</label>
+                    <input type="password" id="new-password" name="new-password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirm New Password:</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required>
+                </div>
+                <button type="submit">Change Password</button>
+            </form>
+        </section>
+        
+    </main>
+    <footer>
+        <p>Contact us: skinetsupport@gmail.com</p>
+    </footer>
+    <script src="js/profile.js"></script>
+</body>
+</html>

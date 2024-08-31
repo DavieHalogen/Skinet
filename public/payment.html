@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Options</title>
+    <link rel="stylesheet" href="css/payment.css">
+</head>
+<body>
+    <header>
+        <div class="dropdown">
+            <button class="dropbtn">Menu</button>
+            <div class="dropdown-content">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="profile.html">Profile</a>
+                <a href="about.html">About</a>
+            </div>
+        </div>
+        
+        <h1>Welcome to SKINET</h1>
+        <a href="profile.html">
+    <img id="profile-icon" src="/images/default-profile.png" alt="Profile Icon">
+</a>
+    </header>
+    <main>
+        <section id="payment-options">
+            <div class="paymentContainer">
+            <h2>MPESA PAYMENT</h2>
+            <div id="selected-package" class="selected-package">
+              <em> 
+              <h3><span id="package-name"></span></h3>
+              <h3>Price: Ksh <span id="package-price"></span></h3>
+              </em>
+            </div>
+            <div class="payment-option">
+                <div id="payment-form">
+                <span>+254</span>
+                <input type="text" id="mobile-number" placeholder="Enter mobile number" pattern="[0-9]{10}" required>
+                <button onclick="payWithMpesa()">Pay with Mpesa</button>
+                </div>
+            </div>
+            </div>
+
+        </section>
+         <section id="packages">
+            <div class="packages-container">
+                <div class="package">
+                    <h3>Hourly Package</h3>
+                    <p>Speed: 30 Mbps</p>
+                    <p>Data: Unlimited</p>
+                    <p>Price: Ksh 20</p>
+                    <button onclick="selectPackage('Hourly Package', 20)">Select</button>
+                </div>
+                <div class="package">
+                    <h3>Daily Package</h3>
+                    <p>Speed: 30 Mbps</p>
+                    <p>Data: Unlimited</p>
+                    <p>Price: Ksh 50</p>
+                    <button onclick="selectPackage('Daily Package', 50)">Select</button>
+                </div>
+                <div class="package">
+                    <h3>Two-Day Package</h3>
+                    <p>Speed: 30 Mbps</p>
+                    <p>Data: Unlimited</p>
+                    <p>Price: Ksh 80</p>
+                    <button onclick="selectPackage('Two-Day Package', 80)">Select</button>
+                </div>
+                <div class="package">
+                    <h3>Weekly Package</h3>
+                    <p>Speed: 30 Mbps</p>
+                    <p>Data: Unlimited</p>
+                    <p>Price: Ksh 200</p>
+                    <button onclick="selectPackage('Weekly Package', 200)">Select</button>
+                </div>
+                <div class="package">
+                    <h3>Monthly Package</h3>
+                    <p>Speed: 30 Mbps</p>
+                    <p>Data: Unlimited</p>
+                    <p>Price: Ksh 500</p>
+                    <button onclick="selectPackage('Monthly Package', 500)">Select</button>
+                </div>
+                <div class="package">
+                    <h3>Family Package</h3>
+                    <p>Speed: 30 Mbps</p>
+                    <p>Data: Unlimited</p>
+                    <p>Price: Ksh 800</p>
+                    <button onclick="selectPackage('Family Package', 800)">Select</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Contact us: skinetsupport@gmail.com</p>
+    </footer>
+    <script  src="js/payment.js"></script>
+</body>
+</html>

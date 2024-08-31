@@ -1,0 +1,194 @@
+/* General styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: linear-gradient(rgb(15, 12, 41), rgb(48, 43, 99), rgb(36, 36, 62));
+    color: #333;
+    
+}
+
+html, body {
+    min-height: 100%;
+    margin: 0;
+}
+
+main {
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 70px; /* Optional padding for footer */
+}
+/* Header styles */
+header {
+    background: linear-gradient(90deg, #70dcd1, #f3f36a);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    display: flex;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+    flex-grow: 1;
+}
+/* Dropdown menu styles */
+.dropdown {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.dropbtn {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #4CAF50;
+    transform: scale(1.05);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #70dcd1;
+    min-width: 160px;
+    boxshadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1; 
+    right: -18px;
+    border-radius: 8px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* Packages section styles */
+#packages, #payment-options {
+    margin: 20px auto;
+    padding: 20px;
+    background: linear-gradient(rgb(15, 12, 41), rgb(48, 43, 99), rgb(36, 36, 62));
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+}
+
+.packages-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.package {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+     background: url("https://img.freepik.com/premium-vector/abstract-realistic-technology-particle-background_23-2148414765.jpg?w=740") center center / cover no-repeat;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    width: 100%;
+    max-width: 250px;
+    color: white;
+}
+
+.package h3 {
+    margin-top: 0;
+}
+
+.package:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+button {
+    padding: 10px 20px;
+    background-color: rgb(202, 188, 79);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+footer {
+    background: linear-gradient(90deg, #70dcd1, #f3f36a);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+/*.package:nth-child(odd) {
+    background url("https://img.freepik.com/premium-vector/abstract-realistic-technology-particle-background_23-2148414765.jpg?w=740") center center / cover no-repeat;
+}
+
+.package:nth-child(even) {
+    background url:( "https://img.freepik.com/premium-vector/abstract-realistic-technology-particle-background_23-2148414765.jpg?w=740") center center / cover no-repeat;
+}*/
+
+/* Sign up form styles */
+.form-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+#signup-form,#login-form {
+    margin: 20px auto;
+    padding: 100px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input[type="email"], input[type="text"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
